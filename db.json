@@ -1,0 +1,64 @@
+{
+   "products": [
+     {
+       "id": "1",
+       "name": "Acer",
+       "description": "Acer Inc (Acer) is an information and communication technology company that develops, designs, markets, and exports IT products.",
+       "element": "laptop",
+        "price": 100
+     },
+     {
+      "id": "2",
+      "name": "Lenovo",
+      "description": "Lenovo is one of the world's leading personal technology companies, producing innovative PCs and mobile internet devices.",
+      "element": "laptop",
+       "price": 50
+    },
+    {
+      "id": "3",
+      "name": "Asus",
+      "description": "ASUS is a Taiwan-based, multinational computer hardware and consumer electronics company that was established in 1989.",
+      "element": "laptop",
+       "price": 70
+    },
+    {
+      "id": "4",
+      "name": "Mac",
+      "description": "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
+      "element": "laptop",
+       "price": 200
+    }
+   ],
+   "filters": [
+     {
+       "id": "all",
+       "name": "all",
+       "label": "Все",
+       "className": "btn-outline-dark"
+     },
+     {
+       "id": "fire",
+       "name": "fire",
+       "label": "Огонь",
+       "className": "btn-danger"
+     },
+     {
+       "id": "water",
+       "name": "water",
+       "label": "Вода",
+       "className": "btn-primary"
+     },
+     {
+       "id": "wind",
+       "name": "wind",
+       "label": "Ветер",
+       "className": "btn-success"
+     },
+     {
+       "id": "earth",
+       "name": "earth",
+       "label": "Земля",
+       "className": "btn-secondary"
+     }
+   ]
+ }
