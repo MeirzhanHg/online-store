@@ -1,4 +1,3 @@
-import { Navigate, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useAuth } from "hooks/use-auth";
 import { removeUser } from "store/slices/userSlice";
@@ -9,16 +8,16 @@ const HomePage = () => {
 
    const { isAuth, email } = useAuth();
 
-   return  (
+   return (
       <div>
-         <ProductsItems/>
+         <ProductsItems />
 
          <button onClick={() => dispatch(removeUser())}>
             Log out from {email}
          </button>
 
       </div>
-   ) 
+   )
 };
 
 export default HomePage;
