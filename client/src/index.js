@@ -4,16 +4,20 @@ import { BrowserRouter as Router, } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from 'store'
 
-import App from './App'
+import App from 'components/app/App'
 
-import './index.css'
 import './firebase'
+import 'assets/styles/style.scss'
+
+import Layout from 'components/layout/Layout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Provider store={store}>
     <Router>
-      <App />
+      <Layout>
+        <App />
+      </Layout>
     </Router>
   </Provider>
 )
