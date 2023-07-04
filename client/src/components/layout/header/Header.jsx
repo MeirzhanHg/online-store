@@ -2,7 +2,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { CgMenuRight } from "react-icons/cg";
-import { useEffect, useState } from 'react'
+import { useState } from "react";
 
 import basket from "assets/img/basket.svg";
 import favorite from "assets/img/favorite.svg";
@@ -13,9 +13,9 @@ import { menuData } from "./menu.data.js";
 
 import "./Header.scss";
 
-const Header = () => {
-   const [isShow, setIsShow] = useState(false)
-
+const Header = ({signUp}) => {
+   const [isShow, setIsShow] = useState(false);
+   
    return (
       <header className="header">
          <div className="container">
@@ -48,12 +48,16 @@ const Header = () => {
                         <img src={search} alt="search" />
                      </button>
                   </div>
-                  <button className="header_favorite">
-                     <img src={favorite} alt="favorite" />
-                  </button>
-                  <button className="header_basket">
-                     <img src={basket} alt="basket" />
-                  </button>
+                  {!signUp && (
+                     <>
+                        <button className="header_favorite">
+                           <img src={favorite} alt="favorite" />
+                        </button>
+                        <button className="header_basket">
+                           <img src={basket} alt="basket" />
+                        </button>
+                     </>
+                  )}
                   <button
                      className="hamburger"
                      aria-label="Open menu"

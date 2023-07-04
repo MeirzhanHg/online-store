@@ -8,18 +8,16 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
    return (
-      <main>
-         <Suspense fallback={<Spinner />}>
-            <Routes>
-               <Route path="/" element={<MainPage />} />
+      <Suspense fallback={<Spinner />}>
+         <Routes>
+            <Route path="/" element={<MainPage />} />
 
-               <Route path="/sign-in" element={<SignUpPage />} />
-               <Route path="/log-in" element={<LogInPage />} />
+            <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/log-in" element={<LogInPage />} />
 
-               <Route path={"*"} element={<PageNotFound />} />
-            </Routes>
-         </Suspense>
-      </main>
+            <Route path={"*"} element={<PageNotFound />} />
+         </Routes>
+      </Suspense>
    );
 };
 

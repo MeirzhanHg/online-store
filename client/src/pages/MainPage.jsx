@@ -1,9 +1,14 @@
-import Slider from 'components/slider/Slider'
+import Layout from "components/layout/Layout";
+import Slider from "components/slider/Slider";
 
 const MainPage = () => {
- return <div className='container'>
-   <Slider/>
- </div>
-}
+   return (
+      <Layout>
+         <div className="container">
+            <Slider />
+         </div>
+      </Layout>
+   );
+};
 
-export default MainPage
+export default MainPage;

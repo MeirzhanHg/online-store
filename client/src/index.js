@@ -6,17 +6,13 @@ import { store } from 'store'
 
 import App from 'components/app/App'
 
-import 'assets/styles/style.scss'
-
-import Layout from 'components/layout/Layout'
+import './assets/styles/style.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Provider store={store}>
     <Router>
-      <Layout>
-        <App />
-      </Layout>
+      <App />
     </Router>
   </Provider>
 )
