@@ -1,16 +1,39 @@
 .header {
-  border-bottom: 1px solid #F5F5F5;
-  
+   border-bottom: 1px solid #F5F5F5;
 
    &_content {
       min-height: 70px;
       align-items: center;
       display: flex;
-      justify-content:  space-between;
+      justify-content: space-between;
    }
 
    &_tools {
       display: flex;
+      align-items: center;
+   }
+
+   &_search {
+      position: relative;
+
+      >input {
+         padding: 10px 34px 10px 20px;
+         border-radius: 4px;
+         background: #F5F5F5;
+         outline: none;
+         border: none;
+
+         &::placeholder {
+            font-size: 12px;
+            line-height: 18px;
+
+         }
+      }
+      margin-right: 24px;
+   }
+
+   &_favorite {
+      margin-right: 16px;
    }
 }
 
@@ -18,7 +41,22 @@
    &_list {
       display: flex;
    }
+
    &_item:not(:last-child) {
-      margin-right: 25px;
+      margin-right: 48px;
    }
+}
+
+.search_btn {
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   border: none;
+   padding-right: 12px;
+   background-color: transparent;
+}
+
+.active {
+   border-bottom: 1px solid #515151;
 }
