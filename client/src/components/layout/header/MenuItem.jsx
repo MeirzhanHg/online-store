@@ -1,15 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
-import cn from 'classnames';
-import './Header.scss'
+import cn from "classnames";
+import { useOnClickOutside } from "hooks/useOnClickOutside";
+
+import "./Header.scss";
 
 const MenuItem = ({ item }) => {
-   const {pathname} = useLocation();
-      
+   const { pathname } = useLocation();
+   
    return (
-      <li  className={cn('menu_item',{
-         active: pathname === item.link,
-      })}>
-         <Link to={item.link} className='menu_link'>
+      <li
+         className={cn("menu_item", {
+            active: pathname === item.link,
+         })}
+      >
+         <Link to={item.link} className="menu_link">
             {item.title}
          </Link>
       </li>

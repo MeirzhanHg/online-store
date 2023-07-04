@@ -23,7 +23,9 @@ const Footer = () => {
                            111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
                         </div>
                         <div className="footer_email">exclusive@gmail.com</div>
-                        <a href='#' className="footer_phone">+88015-88888-9999</a>
+                        <a href="#" className="footer_phone">
+                           +88015-88888-9999
+                        </a>
                      </div>
                   </div>
 
@@ -49,6 +51,9 @@ const Footer = () => {
                   </div>
                </div>
             </div>
+         </div>
+         <div className="footer_cop">
+            Copyright Rimel 2022. All right reserved
          </div>
       </footer>
    );
