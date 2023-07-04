@@ -1,9 +1,11 @@
-import Slider from 'components/slider/Slider'
+import Slider from "components/slider/Slider";
 
 const MainPage = () => {
- return <div className='container'>
-   <Slider/>
- </div>
-}
+  return (
+    <div className="container">
+      <Slider />
+    </div>
+  );
+};
 
-export default MainPage
+export default MainPage;
