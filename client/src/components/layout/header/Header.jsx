@@ -2,8 +2,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { CgMenuRight } from "react-icons/cg";
-
-import { useOnClickOutside } from "hooks/useOnClickOutside";
+import { useEffect, useState } from 'react'
 
 import basket from "assets/img/basket.svg";
 import favorite from "assets/img/favorite.svg";
@@ -15,7 +14,7 @@ import { menuData } from "./menu.data.js";
 import "./Header.scss";
 
 const Header = () => {
-   const { ref, setIsShow, isShow } = useOnClickOutside(false);
+   const [isShow, setIsShow] = useState(false)
 
    return (
       <header className="header">
@@ -32,11 +31,7 @@ const Header = () => {
                   <ul className="menu_list">
                      {menuData?.map((item) => (
                         <MenuItem
-                           onClick={(e) => {
-                              e.preventDefault()
-                              console.log('click');
-                              setIsShow(!isShow)
-                           }}
+                           setIsActive={setIsShow}
                            key={item.link}
                            item={item}
                         />

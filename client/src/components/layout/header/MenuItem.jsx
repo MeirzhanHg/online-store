@@ -1,14 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import cn from "classnames";
-import { useOnClickOutside } from "hooks/useOnClickOutside";
+
 
 import "./Header.scss";
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, setIsActive }) => {
    const { pathname } = useLocation();
    
    return (
       <li
+         onClick={() => setIsActive(false)}
          className={cn("menu_item", {
             active: pathname === item.link,
          })}
