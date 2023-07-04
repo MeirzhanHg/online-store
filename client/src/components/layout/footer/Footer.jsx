@@ -47,6 +47,15 @@ const Footer = () => {
                         <div className="footer_text">Contact</div>
                      </div>
                   </div>
+                  <div className="footer_row">
+                     <div className="footer_item">
+                        <div className="footer_label">Quick Link</div>
+                        <div className="footer_text">Privacy Policy</div>
+                        <div className="footer_text">Terms Of Use</div>
+                        <div className="footer_text">FAQ</div>
+                        <div className="footer_text">Contact</div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
