@@ -45,4 +45,4 @@ const { actions, reducer } = heroesSlice;
 export default reducer;
 
 
-const { selectAll } = productsAdapter.getSelectors(state => state.products);
+export const { selectAll } = productsAdapter.getSelectors(state => state.products);
