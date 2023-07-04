@@ -6,7 +6,6 @@ import { store } from 'store'
 
 import App from 'components/app/App'
 
-import './firebase'
 import 'assets/styles/style.scss'
 
 import Layout from 'components/layout/Layout'

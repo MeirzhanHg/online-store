@@ -1,6 +1,13 @@
 .header {
    border-bottom: 1px solid #F5F5F5;
 
+   &_logo {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: Inter;
+      letter-spacing: 0.72px;
+   }
+
    &_content {
       min-height: 70px;
       align-items: center;
