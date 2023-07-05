@@ -25,7 +25,7 @@ import Timer from "components/ui/timer/Timer";
 
 SwiperCore.use([Navigation]);
 
-const productds = [
+const products = [
    {
       id: "1",
       name: "Acer",
@@ -93,13 +93,13 @@ const Sale = () => {
 
    const goPrevSlide = () => {
       setActiveSlideIndex((prevIndex) =>
-         prevIndex === 0 ? productds.length - 1 : prevIndex - 1
+         prevIndex === 0 ? products.length - 1 : prevIndex - 1
       );
    };
 
    const goNextSlide = () => {
       setActiveSlideIndex((prevIndex) =>
-         prevIndex === productds.length - 1 ? 0 : prevIndex + 1
+         prevIndex === products.length - 1 ? 0 : prevIndex + 1
       );
    };
 
@@ -137,7 +137,7 @@ const Sale = () => {
                   },
                }}
             >
-               {productds.map((item) => (
+               {products.map((item) => (
                   <SwiperSlide
                      key={item.id}
                      className={`saleSlide ${

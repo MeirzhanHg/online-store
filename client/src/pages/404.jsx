@@ -1,5 +1,14 @@
-const PageNotFound = () => {
- return <div>PageNotFound</div>
-}
+import Layout from "components/layout/Layout";
+import PageNotFoundContent from "components/page_not_found/PageNotFoundContent";
 
-export default PageNotFound
+const PageNotFound = () => {
+   return (
+      <Layout>
+         <div className="container">
+            <PageNotFoundContent />
+         </div>
+      </Layout>
+   );
+};
+
+export default PageNotFound;
