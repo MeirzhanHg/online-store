@@ -16,6 +16,9 @@ import saleProductImg4 from "assets/img/sale/sale-4.png";
 import saleProductImg5 from "assets/img/sale/sale-4.png";
 import saleProductImg6 from "assets/img/sale/sale-4.png";
 
+import arrowLeft from "assets/img/icons/arrow-left-slider.svg";
+import arrowRight from "assets/img/icons/arrow-right-slider.svg";
+
 import "./Sale.scss";
 
 SwiperCore.use([Navigation]);
@@ -29,7 +32,7 @@ const slide_img = [
    saleProductImg6,
 ];
 
-const Slider = () => {
+const Sale = () => {
    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
    const goPrevSlide = () => {
@@ -46,11 +49,11 @@ const Slider = () => {
 
    return (
       <div className="sale">
-         <div className="sale-date">
-            <div className="sale-red"></div>
+         <div className="section-subtitle">
+            <div className="section-subtitle-block"></div>
             Today's
          </div>
-         <div className="sale-title">Flash Sales</div>
+         <h2 className="sale-title section-title">Flash Sales</h2>
          <div className="sale-slider-container">
             <Swiper
                grabCursor={true}
@@ -108,13 +111,13 @@ const Slider = () => {
                   className="custom-navigation-button custom-navigation-button-prev"
                   onClick={goPrevSlide}
                >
-                  <span>&lt;</span>
+                  <img src={arrowLeft} alt="" />
                </div>
                <div
                   className="custom-navigation-button custom-navigation-button-next"
                   onClick={goNextSlide}
                >
-                  <span>&gt;</span>
+                  <img src={arrowRight} alt="" />
                </div>
             </div>
             <Link className="sale-btn">View All Products</Link>
@@ -123,7 +126,7 @@ const Slider = () => {
    );
 };
 
-export default Slider;
+export default Sale;
 
 const productds = [
    {

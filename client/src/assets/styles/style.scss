@@ -67,3 +67,38 @@ main {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.section {
+  &-title {
+    margin-top: 24px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+  }
+
+  &-subtitle {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: #DB4444;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    &-block {
+      width: 20px;
+      height: 40px;
+      background-color: #DB4444;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
