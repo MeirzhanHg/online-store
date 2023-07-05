@@ -3,6 +3,8 @@ import Sale from "components/sale/Sale";
 import Category from "components/category/Category"
 import BestProducts from "components/best_products/BestProducts"
 import Music from "components/music/Music"
+import Products from "components/products/Products"
+import Catalog from "components/catalog/Catalog"
 
 const MainPage = () => {
    return (
@@ -12,6 +14,8 @@ const MainPage = () => {
             <Category />
             <BestProducts/>
             <Music/>
+            <Products/>
+            <Catalog/>
          </div>
       </Layout>
    );

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import "./Timer.scss";
 
-const Timer = ({ deadline }) => {
+const Timer = ({ deadline, ellipse }) => {
    const [days, setDays] = useState(0);
    const [hours, setHours] = useState(0);
    const [minutes, setMinutes] = useState(0);
@@ -29,29 +29,27 @@ const Timer = ({ deadline }) => {
       return () => clearInterval(interval);
    }, []);
 
-   
-
    return (
-      <div className="timer" role="timer">
-         <div className="col-4">
+      <div className={`timer ${ellipse}`} role="timer">
+         <div className="column">
             <div className="box">
                <span className="text">Days</span>
                <p className="label" id="day">{days < 10 ? "0" + days : days}</p>
             </div>
          </div>
-         <div className="col-4">
+         <div className="column">
             <div className="box">
                <span className="text">Hours</span>
                <p className="label" id="hour">{hours < 10 ? "0" + hours : hours}</p>
             </div>
          </div>
-         <div className="col-4">
+         <div className="column">
             <div className="box">
                <span className="text">Minutes</span>
                <p className="label" id="minute">{minutes < 10 ? "0" + minutes : minutes}</p>
             </div>
          </div>
-         <div className="col-4">
+         <div className="column">
             <div className="box">
                <span className="text">Seconds</span>
                <p className="label" id="second">{seconds < 10 ? "0" + seconds : seconds}</p>

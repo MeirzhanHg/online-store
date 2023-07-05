@@ -123,23 +123,15 @@ const Sale = () => {
                   nextEl: ".custom-navigation-button-next",
                }}
                breakpoints={{
-                  
                   320: {
-                     //   width: 640,
                      slidesPerView: 1,
                   },
                   430: {
-                     //   width: 640,
                      slidesPerView: 2,
                   },
-                  // when window width is >= 768px
                   768: {
-                     // width: 768,
                      slidesPerView: 3,
                   },
-                  // 992: {
-                  //    slidesPerView: 3,
-                  // },
                   1000: {
                      slidesPerView: 4,
                   },

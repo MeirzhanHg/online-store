@@ -1,7 +1,8 @@
-import musicImage from "assets/img/music-bg.png";
+import musicImage from "assets/img/music3.png";
 
 import "./Music.scss";
 import Button from "components/ui/button/Button";
+import Timer from "components/ui/timer/Timer";
 
 const Music = () => {
    return (
@@ -10,7 +11,10 @@ const Music = () => {
             <div className="music-content">
                <div className="music-subtitle">Categories</div>
                <h3 className="music-title">Enhance Your Music Experience</h3>
-               <Button className={".music-btn"} children={"Buy Now!"}></Button>
+               <div className="music-timer">
+                  <Timer deadline="July, 7, 2023" ellipse='ellipse'/>
+               </div>
+               <Button background>Buy Now!</Button>
             </div>
             <div className="music-image">
                <img src={musicImage} alt="music" />
