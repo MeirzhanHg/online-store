@@ -1,11 +1,11 @@
 import Layout from "components/layout/Layout";
-import Slider from "components/slider/Slider";
+import Sale from "components/sale/Sale";
 
 const MainPage = () => {
    return (
       <Layout>
          <div className="container">
-            <Slider />
+            <Sale />
          </div>
       </Layout>
    );
