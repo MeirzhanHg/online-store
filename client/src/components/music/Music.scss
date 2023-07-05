@@ -1,0 +1,11 @@
+.music {
+   padding: 70px 0;
+   background-color: #000;
+   &-image {
+      >img {
+         border-radius: 50%;
+
+      }
+   }
+}
+ 
