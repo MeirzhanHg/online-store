@@ -4,7 +4,7 @@ import Layout from "components/layout/Layout";
 const LogInPage = () => {
    return (
       <Layout>
-         <Auth title="Log in to Exclusive" text='Log in' isNameRequired/>
+         <Auth title="Log in to Exclusive" question='Are you not registered yet?' text='Log in' isNameRequired link='sign-up'/>
       </Layout>
    );
 };

@@ -4,11 +4,9 @@ import { useForm } from "react-hook-form";
 import phoneImage from "assets/img/sign-image.png";
 
 import "./Auth.scss";
+import { validEmail } from 'shared/regex'
 
-const validEmail =
-   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-const Auth = ({ title, isNameRequired, text }) => {
+const Auth = ({ title, isNameRequired, text, link,question }) => {
    const {
       register,
       handleSubmit,
@@ -96,19 +94,14 @@ const Auth = ({ title, isNameRequired, text }) => {
                         {text}
                      </button>
 
-                     {
-                        !isNameRequired && (
-                           <div className="form_footer">
-                           <p>
-                              Already have an account?{" "}
-                              <Link to="/log-in" className="form_logIn">
-                                 Log in
-                              </Link>
-                           </p>
-                        </div>
-                        )
-                     }
-                    
+                     <div className="form_footer">
+                        <p>
+                           {question}
+                           <Link to={`/${link}`} className="form_logIn">
+                              {link}
+                           </Link>
+                        </p>
+                     </div>
                   </form>
                </div>
             </div>
