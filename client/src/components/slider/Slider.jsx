@@ -52,17 +52,18 @@ const Slider = () => {
           grabCursor={true}
           slidesPerView={4}
           spaceBetween={30}
-          loop={true}
           className="sale-slider"
           navigation={{
             prevEl: ".custom-navigation-button-prev",
             nextEl: ".custom-navigation-button-next",
           }}
         >
-          {slide_img.map((img, i) => (
+          {productds.map((item) => (
             <SwiperSlide
-              key={i}
-              className={`saleSlide ${i === activeSlideIndex ? "active" : ""}`}
+              key={item.id}
+              className={`saleSlide ${
+                item.id === activeSlideIndex ? "active" : ""
+              }`}
             >
               <div className="sale-slide-top">
                 <div className="sale-slide-percent">-40%</div>
@@ -71,13 +72,13 @@ const Slider = () => {
                 </Link>
               </div>
               <div className="sale-slide-center">
-                <img src={img} alt="" className="sale-slide-img" />
+                <img src={item.image} alt="" className="sale-slide-img" />
               </div>
               <div className="sale-slide-bottom">
-                <h3 className="sale-product-name">HAVIT HV-G92 Gamepad</h3>
+                <h3 className="sale-product-name">{item.name}</h3>
                 <div className="sale-product-prices">
                   <span className="sale-product-price sale-product-new-price">
-                    $120
+                    {item.price}
                   </span>
                   <span className="sale-product-price sale-product-old-price">
                     $160
@@ -114,3 +115,60 @@ const Slider = () => {
 };
 
 export default Slider;
+
+const productds = [
+  {
+    id: "1",
+    name: "Acer",
+    description:
+      "Acer Inc (Acer) is an information and communication technology company that develops, designs, markets, and exports IT products.",
+    element: "laptop",
+    price: 100,
+    image: saleProductImg1,
+  },
+  {
+    id: "2",
+    name: "Lenovo",
+    description:
+      "Lenovo is one of the world's leading personal technology companies, producing innovative PCs and mobile internet devices.",
+    element: "laptop",
+    price: 50,
+    image: saleProductImg2,
+  },
+  {
+    id: "3",
+    name: "Asus",
+    description:
+      "ASUS is a Taiwan-based, multinational computer hardware and consumer electronics company that was established in 1989.",
+    element: "laptop",
+    price: 70,
+    image: saleProductImg3,
+  },
+  {
+    id: "4",
+    name: "Mac",
+    description:
+      "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
+    element: "laptop",
+    price: 200,
+    image: saleProductImg4,
+  },
+  {
+    id: "5",
+    name: "Mac",
+    description:
+      "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
+    element: "laptop",
+    price: 200,
+    image: saleProductImg4,
+  },
+  {
+    id: "6",
+    name: "Mac",
+    description:
+      "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
+    element: "laptop",
+    price: 200,
+    image: saleProductImg4,
+  },
+];
