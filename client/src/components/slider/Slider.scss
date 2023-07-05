@@ -48,7 +48,7 @@
       padding: 14px 9px;
       justify-content: center;
       align-items: center;
-      flex-shrink: 0;
+      background-color: #f5f5f5;
     }
 
     &-img {
@@ -103,12 +103,13 @@
   top: 10px;
   right: 10px;
   display: flex;
+  align-items: center;
+  column-gap: 8px;
 }
 
 .custom-navigation-button {
   width: 30px;
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +117,6 @@
   cursor: pointer;
 }
 
-.custom-navigation-button span {
-  color: white;
-  font-size: 20px;
+.custom-navigation-button img {
+  font-size: 24px;
 }

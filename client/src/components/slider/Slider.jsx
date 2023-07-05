@@ -16,6 +16,9 @@ import saleProductImg4 from "assets/img/sale/sale-4.png";
 import saleProductImg5 from "assets/img/sale/sale-4.png";
 import saleProductImg6 from "assets/img/sale/sale-4.png";
 
+import arrowLeft from "assets/img/icons/arrow-left-slider.svg";
+import arrowRight from "assets/img/icons/arrow-right-slider.svg";
+
 import "./Slider.scss";
 
 SwiperCore.use([Navigation]);
@@ -50,12 +53,26 @@ const Slider = () => {
       <div className="sale-slider-container">
         <Swiper
           grabCursor={true}
-          slidesPerView={4}
+          slidesPerView={4.5}
           spaceBetween={30}
           className="sale-slider"
           navigation={{
             prevEl: ".custom-navigation-button-prev",
             nextEl: ".custom-navigation-button-next",
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: "auto",
+            },
+            576: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: 3,
+            },
+            992: {
+              slidesPerView: 4,
+            },
           }}
         >
           {productds.map((item) => (
@@ -100,13 +117,13 @@ const Slider = () => {
             className="custom-navigation-button custom-navigation-button-prev"
             onClick={goPrevSlide}
           >
-            <span>&lt;</span>
+            <img src={arrowLeft} alt="To Left" />
           </div>
           <div
             className="custom-navigation-button custom-navigation-button-next"
             onClick={goNextSlide}
           >
-            <span>&gt;</span>
+            <img src={arrowRight} alt="To Right" />
           </div>
         </div>
       </div>
