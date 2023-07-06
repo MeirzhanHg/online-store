@@ -1,56 +1,57 @@
 .bestProducts {
-   margin-top: 70px;
-   margin-bottom: 40px;
+  margin-top: 70px;
+  margin-bottom: 40px;
 }
 
 .section {
-   &-title {
-      margin-top: 24px;
-      font-size: 36px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 48px;
-      letter-spacing: 1.44px;
-   }
+  &-title {
+    margin-top: 24px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+  }
 
-   &-subtitle {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 20px;
-      color: #DB4444;
-      display: flex;
-      align-items: center;
-      column-gap: 16px;
+  &-subtitle {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: #db4444;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
 
-      &-block {
-         width: 20px;
-         height: 40px;
-         background-color: #DB4444;
-      }
-   }
+    &-block {
+      width: 20px;
+      height: 40px;
+      background-color: #db4444;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
-   .section {
-      &-title {
-         font-size: 32px;
-      }
-   }
+  .section {
+    &-title {
+      font-size: 32px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-   .section {
-      &-title {
-         font-size: 26px;
-      }
-   }
+  .section {
+    &-title {
+      font-size: 26px;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
-   .section {
-      &-title {
-         font-size: 22px;
-      }
-   }
+  .section {
+    &-title {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+  }
 }

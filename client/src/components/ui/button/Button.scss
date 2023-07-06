@@ -1,23 +1,23 @@
 .button-custom {
-   display: flex;
-   padding: 16px 48px;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
-   border-radius: 4px;
-   background: #DB4444;
-   color: #fff;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 24px;
-   &.center {
-      margin: 0 auto;
-   }
+  display: flex;
+  padding: 16px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: #db4444;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  &.center {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
-   .button-custom {
-      padding: 10px 35px;
-   }
-
+  .button-custom {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
 }

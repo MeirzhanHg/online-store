@@ -1,45 +1,54 @@
 .timer {
-   margin-bottom: 40px;
-   text-align: center;
-   display: flex;
+  margin-bottom: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 12px;
 }
 
 .timer.ellipse .column {
-   width: 60px;
-   height: 60px;
-   background-color: #fff;
-   border-radius: 50%;
-   margin-right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  column-gap: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .timer.ellipse .label {
-   font-size: 16px;
+  font-size: 16px;
 }
 
 .timer.ellipse .text {
-   font-size: 11px;
-}
-
-.column {
-   margin-right: 30px;
+  font-size: 11px;
 }
 
 .label {
-   font-size: 30px;
-   font-weight: 700;
-   font-family: 'Inter';
-   letter-spacing: 1.28px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Inter";
+  letter-spacing: 1.28px;
 }
 
 .box {
-   font-weight: 300;
+  font-weight: 300;
 }
 
 .box p {
-   margin: 0;
+  margin: 0;
 }
 
 .text {
-   font-size: 12px;
-   font-weight: 500;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+  .timer {
+    margin-bottom: 30px;
+  }
 }
