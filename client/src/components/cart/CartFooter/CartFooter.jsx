@@ -1,7 +1,8 @@
 import formatPrice from "utils/priceFormatter";
 import "./CartFooter.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "components/ui/button/Button";
+import { Link } from "react-router-dom"
 
 const coupons = ["SALE", "JENYA", "FOOTER"]
 
@@ -9,6 +10,10 @@ const CartFooter = ({ total }) => {
    const [coupon, setCoupon] = useState("");
    const { count, price } = total;
 	const [newPrice, setNewPrice] = useState(price)
+
+	useEffect(() => {
+		setNewPrice(price)
+	}, [price])
 
    const setPriceByCoupon = (elem) => {
       if (elem && coupons.find(i => i === elem)) {
@@ -47,9 +52,9 @@ const CartFooter = ({ total }) => {
                   <div className="cart-footer__label">Total:</div>
                   <div className="price">{formatPrice(newPrice)} руб.</div>
                </div>
-					<div className="cart-footer-center">
+					<Link to='/order' className="cart-footer-center">
                	<Button classNames='center'>Procees to checkout</Button>
-					</div>
+					</Link>
             </div>
          </div>
       </footer>
