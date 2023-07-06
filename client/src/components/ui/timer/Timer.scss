@@ -52,3 +52,9 @@
     margin-bottom: 30px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .timer {
+    justify-content: center;
+  }
+}

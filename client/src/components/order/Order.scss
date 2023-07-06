@@ -1,0 +1,14 @@
+.order {
+   padding: 100px 0;
+   &__title {
+      font-family: 'Inter';
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: 1.44px;
+      margin-bottom: 50px;
+   }
+
+   &__block {
+      max-width: 470px;
+   }
+}

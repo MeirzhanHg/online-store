@@ -1,25 +1,33 @@
+import { Suspense, useContext } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+
 import Spinner from "components/ui/spinner/Spinner";
 import PageNotFound from "pages/404";
-import AllProductsPage from "pages/AllProductsPage"
-import CartPage from "pages/CartPage"
-import LogInPage from "pages/LogInPage";
-import MainPage from "pages/MainPage";
-import SignUpPage from "pages/SignUpPage";
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+
+import { Context } from "index";
+
+import { authRoutes } from "./routes";
+import { publicRoutes } from "./routes";
 
 const App = () => {
+   const { user } = useContext(Context);
+   console.log(user);
+
    return (
       <Suspense fallback={<Spinner />}>
          <Routes>
-            <Route path="/" element={<MainPage />} />
+            {user.isAuth &&
+               authRoutes.map(({ path, Component }) => {
+                  console.log(path);
+                return   <Route key={path} path={path} element={<Component />} />
+               }
+               )}
 
-            <Route path="/sign-up" element={<SignUpPage />} />
-            <Route path="/login" element={<LogInPage />} />
-            <Route path="/all-products" element={<AllProductsPage />} />
-            <Route path="/cart" element={<CartPage />} />
+            {publicRoutes.map(({ path, Component }) => (
+               <Route key={path} path={path} element={<Component />} />
+            ))}
 
-            <Route path={"*"} element={<PageNotFound />} />
+            <Route path="*" element={<PageNotFound />} />
          </Routes>
       </Suspense>
    );

@@ -12,10 +12,10 @@ const Hero = () => {
       <div className="hero__container">
         <Swiper
           grabCursor={true}
-          //   autoplay={{
-          //     delay: 2500,
-          //     disableOnInteraction: false,
-          //   }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           loop={true}
           modules={[Autoplay]}
         >

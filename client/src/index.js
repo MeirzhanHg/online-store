@@ -1,20 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Provider } from "react-redux";
-import { store } from "store";
+import React, { createContext } from "react"
+import ReactDOM from "react-dom/client"
+import { BrowserRouter as Router } from "react-router-dom"
+import App from "components/app/App"
 
-import App from "components/app/App";
+import UserStore from "store/UserStore"
 
-import "./assets/styles/style.scss";
+import "./assets/styles/style.scss"
 
-console.log(process.env.REACT_APP_API_URL);
+export const Context = createContext(null)
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
-  <Provider store={store}>
+  <Context.Provider value={{
+    user: new UserStore(),
+  }}>
     <Router>
       <App />
     </Router>
-  </Provider>
-);
+  </Context.Provider>
+)
