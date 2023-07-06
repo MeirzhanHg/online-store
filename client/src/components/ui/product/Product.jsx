@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 
 import { AiFillStar, AiOutlineEye } from "react-icons/ai";
 
+import basket from "assets/img/icons/basket.svg";
+
 import "./Product.scss";
 
 const Product = ({ item }) => {
-   const { name, image, newPrice, oldPrice } = item;
+   const { name, image, price, oldPrice } = item;
 
    return (
       <div className="product productSlide">
@@ -19,12 +21,17 @@ const Product = ({ item }) => {
             <div className="product-slide-center">
                <img src={image} alt={name} className="product-slide-img" />
             </div>
+            <div className="product-slide-basket">
+               <img src={basket} alt="basket" className="product-slide-icon"/>
+
+               <div className="product-slide-add">Add To Cart</div>
+            </div>
          </div>
          <div className="product-slide-bottom">
             <h3 className="product-product-name">{name}</h3>
             <div className="product-product-prices">
                <span className="product-product-price product-product-new-price">
-                  {newPrice}
+                  {price}
                </span>
                <span className="product-product-price product-product-old-price">
                   {oldPrice}

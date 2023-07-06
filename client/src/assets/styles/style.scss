@@ -44,6 +44,10 @@ a {
   }
 }
 
+input, input::placeholder {
+  font-family: inherit;
+}
+
 button {
   cursor: pointer;
   font-family: inherit;
@@ -69,8 +73,8 @@ main {
 }
 
 
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 768px;
-  }
-}
+// @media screen and (max-width: 992px) {
+//   .container {
+//     max-width: 768px;
+//   }
+// }

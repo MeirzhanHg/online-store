@@ -53,9 +53,11 @@ const Header = ({signUp}) => {
                         <button className="header_favorite">
                            <img src={favorite} alt="favorite" />
                         </button>
-                        <button className="header_basket">
-                           <img src={basket} alt="basket" />
-                        </button>
+                        <Link to='/cart'>
+                           <button className="header_basket">
+                              <img src={basket} alt="basket" />
+                           </button>
+                        </Link>
                      </>
                   )}
                   <button

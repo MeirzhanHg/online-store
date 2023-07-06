@@ -1,19 +1,23 @@
 .delivery {
-   padding: 30px 0 140px 0;
+   padding: 30px 0 100px 0;
 
    &-items {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      column-gap: 80px;
    }
 
    &-item {
       display: flex;
       align-items: center;
       flex-direction: column;
+      margin-bottom: 40px;
    }
 
    &-title {
+      text-align: center;
       margin-top: 24px;
       color: #000;
       font-size: 20px;
@@ -24,6 +28,7 @@
    }
 
    &-desc {
+      text-align: center;
       margin-top: 8px;
       color: #000;
       text-align: center;

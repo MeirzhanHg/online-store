@@ -89,4 +89,44 @@ export const products = [
       oldPrice: 80,
       image: ProductImg8,
    },
+   {
+      id: "9",
+      name: "Mac",
+      description:
+         "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
+      element: "laptop",
+      price: 200,
+      oldPrice: 80,
+      image: ProductImg4,
+   },
+   {
+      id: "10",
+      name: "Lenovo",
+      description:
+         "Lenovo is one of the world's leading personal technology companies, producing innovative PCs and mobile internet devices.",
+      element: "laptop",
+      price: 50,
+      oldPrice: 25,
+      image: ProductImg6,
+   },
+   {
+      id: "11",
+      name: "Asus",
+      description:
+         "ASUS is a Taiwan-based, multinational computer hardware and consumer electronics company that was established in 1989.",
+      element: "laptop",
+      price: 70,
+      oldPrice: 40,
+      image: ProductImg7,
+   },
+   {
+      id: "12",
+      name: "Mac",
+      description:
+         "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
+      element: "laptop",
+      price: 200,
+      oldPrice: 80,
+      image: ProductImg8,
+   },
 ];

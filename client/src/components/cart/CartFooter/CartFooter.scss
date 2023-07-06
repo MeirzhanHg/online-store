@@ -1,0 +1,46 @@
+@import "assets/styles/vars";
+
+.cart-footer {
+
+    padding-top: 40px;
+
+    &__coupon {
+        display: flex;
+
+        flex: 0 1 50%;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__total {
+        flex: 0 1 50%;
+        border: 1px solid #000;
+        padding: 32px 24px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        border-bottom: 1px solid #000;
+    }
+
+    &__row:nth-child(4) {
+        border-bottom: 0;
+    }
+
+    &-center {}
+}
+
+.coupon {
+    margin-right: 15px;
+
+    >input {
+        padding: 16px 0 16px 24px;
+    }
+}
+
+.cart-footer__count {}

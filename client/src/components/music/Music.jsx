@@ -1,4 +1,4 @@
-import musicImage from "assets/img/music3.png";
+import musicImage from "assets/img/music.png";
 
 import "./Music.scss";
 import Button from "components/ui/button/Button";

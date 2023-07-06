@@ -32,7 +32,7 @@ const products = [
       description:
          "Acer Inc (Acer) is an information and communication technology company that develops, designs, markets, and exports IT products.",
       element: "laptop",
-      newPrice: 100,
+      price: 100,
       oldPrice: 70,
       image: saleProductImg1,
    },
@@ -42,7 +42,7 @@ const products = [
       description:
          "Lenovo is one of the world's leading personal technology companies, producing innovative PCs and mobile internet devices.",
       element: "laptop",
-      newPrice: 50,
+      price: 50,
       oldPrice: 25,
       image: saleProductImg2,
    },
@@ -52,7 +52,7 @@ const products = [
       description:
          "ASUS is a Taiwan-based, multinational computer hardware and consumer electronics company that was established in 1989.",
       element: "laptop",
-      newPrice: 70,
+      price: 70,
       oldPrice: 40,
       image: saleProductImg3,
    },
@@ -62,7 +62,7 @@ const products = [
       description:
          "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
       element: "laptop",
-      newPrice: 200,
+      price: 200,
       oldPrice: 80,
       image: saleProductImg4,
    },
@@ -72,7 +72,7 @@ const products = [
       description:
          "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
       element: "laptop",
-      newPrice: 200,
+      price: 200,
       oldPrice: 120,
       image: saleProductImg5,
    },
@@ -82,7 +82,7 @@ const products = [
       description:
          "The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and marketed by Apple Inc.",
       element: "laptop",
-      newPrice: 200,
+      price: 200,
       oldPrice: 100,
       image: saleProductImg6,
    },
@@ -108,7 +108,7 @@ const Sale = () => {
          <div className="sale-top">
             <Subtitle title="Flash Sales" name="Today's" />
             <div className="sale-timer">
-               <Timer timer="" deadline="July, 8, 2023" />
+               <Timer timer="" deadline="July, 7, 2023" />
             </div>
          </div>
 
@@ -162,9 +162,9 @@ const Sale = () => {
                   <img src={arrowRight} alt="" />
                </div>
             </div>
-            <Button classNames="center">
-               <Link to="/">View All Products</Link>
-            </Button>
+            <Link to="/all-products">
+               <Button classNames="center">View All Products</Button>
+            </Link>
          </div>
       </div>
    );
