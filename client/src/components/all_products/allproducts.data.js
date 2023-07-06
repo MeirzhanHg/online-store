@@ -8,7 +8,7 @@ import ProductImg7 from "assets/img/products/07.png";
 import ProductImg8 from "assets/img/products/08.png";
 
 
-export const products = [
+export const allproducts = [
    {
       id: "1",
       name: "Breed Dry Dog Food",

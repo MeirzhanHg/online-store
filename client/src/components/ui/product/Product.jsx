@@ -7,23 +7,24 @@ import basket from "assets/img/icons/basket.svg";
 import "./Product.scss";
 
 const Product = ({ item }) => {
-   const { name, image, price, oldPrice } = item;
+   const { name, img, price, id  } = item;
 
    return (
       <div className="product productSlide">
          <div className="product-slide-header">
-            <div className="product-slide-top">
-               <div className="product-slide-percent">-40%</div>
-               <Link to="/" className="product-slide-info">
-                  <AiOutlineEye />
-               </Link>
-            </div>
-            <div className="product-slide-center">
-               <img src={image} alt={name} className="product-slide-img" />
-            </div>
+            <Link to={`/allproducts/${item.id}`} className="product-page">
+               <div className="product-slide-top">
+                  <div className="product-slide-percent">-40%</div>
+                  <div className="product-slide-info">
+                     <AiOutlineEye />
+                  </div>
+               </div>
+               <div className="product-slide-center">
+                  <img src={process.env.REACT_APP_API_URL + img} alt={name} className="product-slide-img" />
+               </div>
+            </Link>
             <div className="product-slide-basket">
-               <img src={basket} alt="basket" className="product-slide-icon"/>
-
+               <img src={basket} alt="basket" className="product-slide-icon" />
                <div className="product-slide-add">Add To Cart</div>
             </div>
          </div>
@@ -34,7 +35,7 @@ const Product = ({ item }) => {
                   {price}
                </span>
                <span className="product-product-price product-product-old-price">
-                  {oldPrice}
+                  {/* {oldPrice} */}
                </span>
             </div>
             <div className="product-product-stars">

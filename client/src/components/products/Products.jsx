@@ -3,13 +3,14 @@ import Product from "components/ui/product/Product";
 
 import { products } from "./products.data";
 import "./Products.scss";
-import Button from "components/ui/button/Button"
-import { Link } from "react-router-dom"
+import Button from "components/ui/button/Button";
+import { Link } from "react-router-dom";
 
 const Products = () => {
    return (
       <section className="products">
          <Subtitle name="Our Products" title="Explore Our Products" />
+      
          <div className="products-list">
             {products.map((item) => (
                <div className="products-column" key={item.id}>
@@ -17,6 +18,7 @@ const Products = () => {
                </div>
             ))}
          </div>
+       
          <Button classNames="center">
             <Link to="/">View All Products</Link>
          </Button>

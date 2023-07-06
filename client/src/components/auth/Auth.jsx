@@ -1,12 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
+import { observer } from "mobx-react-lite";
+
+import { login, registration } from "http/userApi"
+
 import phoneImage from "assets/img/sign-image.png";
+import { validEmail } from "shared/regex";
+import { Context } from "index"
+import { useContext, useState } from "react"
 
 import "./Auth.scss";
-import { validEmail } from 'shared/regex'
 
-const Auth = ({ title, isNameRequired, text, link,question }) => {
+const Auth = observer(({ title, isNameRequired, text, link, question }) => {
+   const { user } = useContext(Context);
+   const location = useLocation();
+   const navigate = useNavigate();
+
+   const isLogin = location.pathname === "/login";
+
    const {
       register,
       handleSubmit,
@@ -16,8 +28,24 @@ const Auth = ({ title, isNameRequired, text, link,question }) => {
       mode: "onChange",
    });
 
-   const onSubmit = (data) => {
-      console.log(data);
+   const onSubmit = async (formData) => {
+      console.log(formData);
+      try {
+         let data;
+         if (isLogin) {
+            data = await login(formData.email, formData.password);
+            console.log(data);
+         } else {
+            data = await registration(formData.name, formData.email, formData.password);
+            console.log(data);
+         }
+         user.setUser(user);
+         user.setIsAuth(true);
+         navigate("/");
+      } catch (e) {
+         console.log(e);
+         // alert(e.response.data.message);
+      }
       reset();
    };
 
@@ -108,6 +136,6 @@ const Auth = ({ title, isNameRequired, text, link,question }) => {
          </div>
       </section>
    );
-};
+});
 
 export default Auth;

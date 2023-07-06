@@ -11,8 +11,14 @@
       }
    }
 
-   &-slide {
+   &-page {
       text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   &-slide {
       display: flex;
       align-items: center;
       flex-direction: column;

@@ -15,6 +15,10 @@ export const authRoutes = [
     path: "/order",
     Component: OrderPage,
   },
+  {
+    path: "/cart",
+    Component: CartPage,
+  },
 ];
 
 export const publicRoutes = [
@@ -33,10 +37,6 @@ export const publicRoutes = [
   {
     path: "/sign-up",
     Component: SignUpPage,
-  },
-  {
-    path: "/cart",
-    Component: CartPage,
   },
   // {
   //    path: DEVICE_ROUTE + '/:id',

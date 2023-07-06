@@ -2,20 +2,23 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { CgMenuRight } from "react-icons/cg";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import basket from "assets/img/basket.svg";
-import favorite from "assets/img/favorite.svg";
+import userIcon from "assets/img/user.svg";
 import search from "assets/img/search.svg";
 
 import MenuItem from "./MenuItem";
 import { menuData } from "./menu.data.js";
 
 import "./Header.scss";
+import { Context } from "index"
+import { observer } from "mobx-react-lite"
 
-const Header = ({signUp}) => {
+const Header = observer(() => {
    const [isShow, setIsShow] = useState(false);
-   
+   const {user} = useContext(Context)
+
    return (
       <header className="header">
          <div className="container">
@@ -48,14 +51,16 @@ const Header = ({signUp}) => {
                         <img src={search} alt="search" />
                      </button>
                   </div>
-                  {!signUp && (
+                  {user.isAuth && (
                      <>
-                        <button className="header_favorite">
-                           <img src={favorite} alt="favorite" />
-                        </button>
                         <Link to='/cart'>
                            <button className="header_basket">
                               <img src={basket} alt="basket" />
+                           </button>
+                        </Link>
+                        <Link to='/admin'>
+                           <button className="header_favorite">
+                              <img src={userIcon} alt="user" />
                            </button>
                         </Link>
                      </>
@@ -72,6 +77,6 @@ const Header = ({signUp}) => {
          </div>
       </header>
    );
-};
+});
 
 export default Header;
