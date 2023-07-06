@@ -23,7 +23,6 @@ const CartFooter = ({ total }) => {
 
    return (
       <footer className="cart-footer">
-         {/* <div className='cart-footer__count'>{count} ед.</div> */}
          <div className="cart-footer__wrapper">
             <div className="cart-footer__coupon">
                <div className="coupon">
@@ -31,29 +30,29 @@ const CartFooter = ({ total }) => {
                      type="text"
                      value={coupon}
                      onChange={(e) => setCoupon(e.target.value)}
-                     placeholder="Coupon Code"
+                     placeholder="Код купона"
                   />
                </div>
                <div onClick={() => setPriceByCoupon(coupon)}>
-                  <Button>Apply Coupon</Button>
+                  <Button>Применить купон</Button>
                </div>
             </div>
             <div className="cart-footer__total">
-               <h3 className="cart-footer__title">Cart Total</h3>
+               <h3 className="cart-footer__title">Общее количество корзин</h3>
                <div className="cart-footer__row">
-                  <div className="cart-footer__label">Subtotal</div>
+                  <div className="cart-footer__label">Промежуточный итог</div>
                   <div className="price">{formatPrice(price)} руб.</div>
                </div>
                <div className="cart-footer__row">
-                  <div className="cart-footer__label">Shipping:</div>
-                  <div className="price">Free</div>
+                  <div className="cart-footer__label">Доставка:</div>
+                  <div className="price">Бесплатно</div>
                </div>
                <div className="cart-footer__row">
-                  <div className="cart-footer__label">Total:</div>
+                  <div className="cart-footer__label">Сумма:</div>
                   <div className="price">{formatPrice(newPrice)} руб.</div>
                </div>
 					<Link to='/order' className="cart-footer-center">
-               	<Button classNames='center'>Procees to checkout</Button>
+               	<Button classNames='center'>Переходите к оформлению заказа</Button>
 					</Link>
             </div>
          </div>

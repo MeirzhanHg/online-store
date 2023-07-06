@@ -11,6 +11,7 @@ const Hero = () => {
     <div className="hero">
       <div className="hero__container">
         <Swiper
+          autoHeight={true}
           grabCursor={true}
           autoplay={{
             delay: 2500,

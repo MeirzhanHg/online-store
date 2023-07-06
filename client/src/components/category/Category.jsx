@@ -6,7 +6,7 @@ import "./Category.scss";
 const Category = () => {
   return (
     <div className="category">
-      <Subtitle name="Categories" title="Browse By Category" />
+      <Subtitle name="Категории" title="Просмотр по категориям" />
       <div className="category-list">
         {categoryList.map((item, i) => (
           <div className="category-column" key={i}>

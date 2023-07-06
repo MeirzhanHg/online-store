@@ -5,6 +5,7 @@ import LogInPage from "pages/LogInPage";
 import SignUpPage from "pages/SignUpPage";
 import MainPage from "pages/MainPage";
 import OrderPage from "pages/OrderPage";
+import ContactPage from "pages/ContactPage"
 
 export const authRoutes = [
   {
@@ -38,8 +39,8 @@ export const publicRoutes = [
     path: "/sign-up",
     Component: SignUpPage,
   },
-  // {
-  //    path: DEVICE_ROUTE + '/:id',
-  //    Component: DevicePage
-  // },
+  {
+    path: "/contact",
+    Component: ContactPage,
+  },
 ];

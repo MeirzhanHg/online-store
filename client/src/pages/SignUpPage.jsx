@@ -4,7 +4,7 @@ import Auth from 'components/auth/Auth'
 const SignUpPage = () => {
  return (
    <Layout signUp>
-      <Auth title='Create an account' question='Already have account?'  text='Create Account' link='login'/>
+      <Auth title='Создать аккаунт' question='Уже есть аккаунт?'  text='Создать' link='login'/>
    </Layout>
  )
 }

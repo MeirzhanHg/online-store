@@ -5,17 +5,17 @@ import { ReactComponent as SecurityIcon } from "assets/img/icons/security.svg";
 export const deliveryItems = [
   {
     icon: <TruckIcon />,
-    title: "FREE AND FAST DELIVERY",
-    description: "Free delivery for all orders over $140",
+    title: "БЕСПЛАТНАЯ И БЫСТРАЯ ДОСТАВКА",
+    description: "Бесплатная доставка для всех заказов свыше $140",
   },
   {
     icon: <HeadphoneIcon />,
-    title: "24/7 CUSTOMER SERVICE",
-    description: "Friendly 24/7 customer support",
+    title: "24/7 СЛУЖБА КЛИЕНТА",
+    description: "Дружелюбная круглосуточная поддержка клиентов",
   },
   {
     icon: <SecurityIcon />,
-    title: "MONEY BACK GUARANTEE",
-    description: "We rerun money within 30 days",
+    title: "ГАРАНТИЯ ВОЗВРАТА ДЕНЕГ",
+    description: "Мы возвращаем деньги в течение 30 дней",
   },
 ];

@@ -1,4 +1,4 @@
-.best-top {
+.best__top {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -12,12 +12,12 @@
   padding-top: 20px;
   padding-bottom: 140px;
 
-  &-list {
+  &__list {
     display: flex;
     margin: 0 -10px;
   }
 
-  &-column {
+  &__column {
     flex: 0 1 25%;
     padding: 0 10px;
   }
@@ -25,11 +25,11 @@
 
 @media (max-width: 1000px) {
   .best {
-    &-list {
+    &__list {
       flex-wrap: wrap;
     }
 
-    &-column {
+    &__column {
       flex: 0 1 33.3333%;
       margin-bottom: 40px;
     }
@@ -38,7 +38,7 @@
 
 @media (max-width: 700px) {
   .best {
-    &-column {
+    &__column {
       flex: 0 1 50%;
     }
   }
@@ -50,11 +50,11 @@
   }
   .best {
     padding-bottom: 60px;
-    &-list {
+    &__list {
       margin: 0 -5px;
     }
 
-    &-column {
+    &__column {
       flex: 1 1 100%;
       padding: 0 5px;
     }

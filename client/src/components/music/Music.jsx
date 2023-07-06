@@ -9,13 +9,13 @@ const Music = () => {
     <section className="music">
       <div className="music__wrapper">
         <div className="music__content">
-          <div className="music__subtitle">Categories</div>
-          <h3 className="music__title">Enhance Your Music Experience</h3>
+          <div className="music__subtitle">Категории</div>
+          <h3 className="music__title">Улучшите свой музыкальный опыт</h3>
           <div className="music__timer">
-            <Timer deadline="July, 7, 2023" ellipse="ellipse" />
+            <Timer deadline="July, 8, 2023" ellipse="ellipse" />
           </div>
-          <Button background classNames={`music__btn`}>
-            Buy Now!
+          <Button background classNames='music__btn'>
+            Купить сейчас
           </Button>
         </div>
         <div className="music__image">

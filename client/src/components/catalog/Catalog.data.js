@@ -1,27 +1,27 @@
 import ps from "assets/img/catalog/01.png";
-import women from "assets/img/catalog/women.png";
+import smartphone from "assets/img/catalog/smartphone.webp";
 import speakers from "assets/img/catalog/11.png";
-import perfume from "assets/img/catalog/12.png";
+import laptop from "assets/img/catalog/laptop.jpg";
 
 export const catalogItems = [
   {
-    title: "Speakers",
-    description: "Amazon wireless speakers",
+    title: "Приставки",
+    description: "Игровые приставки от Sony",
     image: ps,
   },
   {
-    title: "Women’s Collections",
-    description: "Featured woman collections that give you another vibe.",
-    image: women,
+    title: "Смартфоны",
+    description: "Разные модели телефонов",
+    image: smartphone,
   },
   {
-    title: "Speakers",
-    description: "Amazon wireless speakers",
+    title: "Колонки",
+    description: "Колонки от Amazon",
     image: speakers,
   },
   {
-    title: "Perfume",
-    description: "GUCCI INTENSE OUD EDP",
-    image: perfume,
+    title: "Ноутбуки",
+    description: "Acer, Lenova, HP",
+    image: laptop,
   },
 ];

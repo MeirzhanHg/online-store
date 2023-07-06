@@ -1,12 +1,11 @@
 import { makeAutoObservable } from "mobx"
 
-import ProductImg1 from "assets/img/products/01.png";
-
 export default class DeviceStore {
    constructor() {
       this._types = []
       this._brands = []
       this._devices = []
+      this._basket = []
       this._selectedType = {}
       this._selectedBrand = {}
       this._page = 1
@@ -23,6 +22,9 @@ export default class DeviceStore {
    }
    setDevices(devices) {
       this._devices = devices
+   }
+   setBasket(basket) {
+      this._basket = basket
    }
 
    setSelectedType(type) {
@@ -49,6 +51,10 @@ export default class DeviceStore {
    get devices() {
       return this._devices
    }
+   get baskets() {
+      return this._basket
+   }
+
    get selectedType() {
       return this._selectedType
    }

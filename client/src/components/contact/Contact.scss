@@ -1,0 +1,45 @@
+.contact {
+   &__items {
+     margin-top: 40px;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   }
+ 
+   &__info {
+     display: flex;
+     flex-direction: column;
+     row-gap: 30px;
+   }
+ 
+   &__icon {
+     color: #db4444;
+     font-size: 32px;
+   }
+ 
+   &__phone,
+   &__mail {
+     display: flex;
+     align-items: center;
+     column-gap: 10px;
+   }
+ 
+   &__map {
+     flex: 0 1 60%;
+   }
+ }
+ 
+ @media screen and (max-width: 600px) {
+   .contact {
+     &__items {
+       flex-direction: column;
+       row-gap: 30px;
+     }
+ 
+     &__map {
+       flex: 0 1 100%;
+       width: 100%;
+     }
+   }
+ }

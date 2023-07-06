@@ -60,7 +60,7 @@ const Auth = observer(({ title, isNameRequired, text, link, question }) => {
                <div className="auth_wrapper">
                   <form className="form" onSubmit={handleSubmit(onSubmit)}>
                      <h4 className="auth_title">{title}</h4>
-                     <h3 className="auth_details">Enter your details below</h3>
+                     <h3 className="auth_details">Введите свои данные ниже</h3>
 
                      {!isNameRequired && (
                         <div className="input">
@@ -69,7 +69,7 @@ const Auth = observer(({ title, isNameRequired, text, link, question }) => {
                               placeholder="Name"
                               name="name"
                               {...register("name", {
-                                 required: "Name required",
+                                 required: "Имя (обязательно)",
                               })}
                            />
                            {errors.name && (
@@ -81,14 +81,14 @@ const Auth = observer(({ title, isNameRequired, text, link, question }) => {
                      <div className="input">
                         <input
                            type="email"
-                           placeholder="Email or Phone Number"
+                           placeholder="E-mail"
                            name="email"
                            {...register("email", {
-                              required: "Email required",
+                              required: "Email (обязательно)",
                               pattern: {
                                  value: validEmail,
                                  message:
-                                    "Please enter your current email address",
+                                 "Пожалуйста, введите свой текущий адрес электронной почты",
                               },
                            })}
                         />
@@ -103,11 +103,11 @@ const Auth = observer(({ title, isNameRequired, text, link, question }) => {
                            placeholder="Password"
                            name="password"
                            {...register("password", {
-                              required: "Password required",
+                              required: "Пароль (обязательно)",
                               minLength: {
                                  value: 6,
                                  message:
-                                    "The minimum length must be more than 6 characters",
+                                 "Минимальная длина должна быть больше 6 символов",
                               },
                            })}
                         />

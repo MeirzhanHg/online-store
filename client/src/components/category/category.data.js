@@ -6,28 +6,28 @@ import headphoneIcon from "assets/img/icons/category/headphones.svg";
 import gamingIcon from "assets/img/icons/category/gaming.svg";
 
 export const categoryList = [
-   {
-      img: phoneIcon,
-      name: 'Phones'
-   },
-   {
-      img: computerIcon,
-      name: 'Computers'
-   },
-   {
-      img: watchIcon,
-      name: 'SmartWatch'
-   },
-   {
-      img: cameraIcon,
-      name: 'Camera'
-   },
-   {
-      img: headphoneIcon,
-      name: 'HeadPhones'
-   },
-   {
-      img: gamingIcon,
-      name: 'Gaming'
-   },
-]
+  {
+    img: phoneIcon,
+    name: "Телефоны",
+  },
+  {
+    img: computerIcon,
+    name: "Компьютеры",
+  },
+  {
+    img: watchIcon,
+    name: "Смарт-часы",
+  },
+  {
+    img: cameraIcon,
+    name: "Камеры",
+  },
+  {
+    img: headphoneIcon,
+    name: "Наушники",
+  },
+  {
+    img: gamingIcon,
+    name: "Игра",
+  },
+];

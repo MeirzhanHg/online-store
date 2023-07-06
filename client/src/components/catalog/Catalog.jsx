@@ -7,14 +7,14 @@ import "./Catalog.scss";
 const Catalog = () => {
   return (
     <div className="catalog">
-      <Subtitle name="Featured" title="New Arrival" />
+      <Subtitle name="Избранное" title="Новое поступление" />
       <div className="catalog__wrapper">
         <div className="catalog__column catalog__column--left">
           <div className="catalog__bottom-content">
             <h3 className="catalog__title">{catalogItems[0].title}</h3>
             <p className="catalog__desc">{catalogItems[0].description}</p>
             <Link className="catalog__link" to="/">
-              Shop Now
+              Купить
             </Link>
           </div>
           <img className="catalog__image" src={catalogItems[0].image} alt="" />
@@ -48,7 +48,7 @@ const Catalog = () => {
                   <h3 className="catalog__title">{item.title}</h3>
                   <p className="catalog__desc">{item.description}</p>
                   <Link className="catalog__link" to="/">
-                    Shop Now
+                    Купить
                   </Link>
                 </div>
                 <img

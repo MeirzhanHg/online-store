@@ -19,7 +19,7 @@ const Order = () => {
    return (
       <section className="order">
          <div className="order__block">
-            <h2 className="order__title">Billing Details</h2>
+            <h2 className="order__title">Реквизиты</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                <OrderFields
                   formState={formState}

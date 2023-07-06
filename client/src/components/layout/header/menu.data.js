@@ -1,18 +1,14 @@
 export const menuData = [
    {
-      link: '/',
-      title: 'Home',
+     link: "/",
+     title: "Главная",
    },
    {
-      link: '/contact',
-      title: 'Contact',
+     link: "/contact",
+     title: "Контакты",
    },
    {
-      link: '/about',
-      title: 'About',
+     link: "/login",
+     title: "Войти",
    },
-   {
-      link: '/sign-up',
-      title: 'Sign Up',
-   },
-]
+ ];
