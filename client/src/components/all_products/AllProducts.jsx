@@ -7,21 +7,31 @@ import { useContext, useEffect } from "react";
 import { Context } from "index";
 
 import "./AllProducts.scss";
-import { fetchDevices } from "http/deviceApi"
+import { fetchBrands, fetchDevices, fetchTypes } from "http/deviceApi"
+import { observer } from "mobx-react-lite"
 
-const AllProducts = () => {
+const AllProducts = observer(() => {
    const { device } = useContext(Context);
 
    useEffect(() => {
+      fetchTypes().then(data => device.setTypes(data))
+      fetchBrands().then(data => device.setBrands(data))
       fetchDevices(null, null, 1, 10).then(data => {
           device.setDevices(data.rows)
           device.setTotalCount(data.count)
       })
-  }, [])
+   }, [])
+
+   useEffect(() => {
+      fetchDevices(device.selectedType.id, device.selectedBrand.id, device.page, 10).then(data => {
+         device.setDevices(data.rows)
+         device.setTotalCount(data.count)
+      })
+   }, [device.page, device.selectedType, device.selectedBrand,])
 
    return (
       <section className="allproducts">
-         <Subtitle name="Products" title="All Products" />
+         <Subtitle name="Продукты" title="Все продукты" />
 
          <div className="allproducts-wrapper">
             <div className="allproducts-navbar">
@@ -40,6 +50,6 @@ const AllProducts = () => {
          </div>
       </section>
    );
-};
+});
 
 export default AllProducts;

@@ -13,8 +13,8 @@ const Catalog = () => {
           <div className="catalog__bottom-content">
             <h3 className="catalog__title">{catalogItems[0].title}</h3>
             <p className="catalog__desc">{catalogItems[0].description}</p>
-            <Link className="catalog__link" to="/">
-              Купить
+            <Link className="catalog__link" to="/all-products">
+                Купить
             </Link>
           </div>
           <img className="catalog__image" src={catalogItems[0].image} alt="" />
@@ -24,8 +24,8 @@ const Catalog = () => {
             <div className="catalog__bottom-content">
               <h3 className="catalog__title">{catalogItems[1].title}</h3>
               <p className="catalog__desc">{catalogItems[1].description}</p>
-              <Link className="catalog__link" to="/">
-                Shop Now
+              <Link className="catalog__link" to="/all-products">
+                Купить
               </Link>
             </div>
             <img
@@ -47,7 +47,7 @@ const Catalog = () => {
                 <div className="catalog__bottom-content">
                   <h3 className="catalog__title">{item.title}</h3>
                   <p className="catalog__desc">{item.description}</p>
-                  <Link className="catalog__link" to="/">
+                  <Link className="catalog__link" to="/all-products">
                     Купить
                   </Link>
                 </div>

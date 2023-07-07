@@ -6,7 +6,7 @@ import basket from "assets/img/icons/basket.svg";
 
 import "./Product.scss";
 
-const Product = ({ item, handleClick }) => {
+const Product = ({ item }) => {
    const { name, img, price, id  } = item;
 
    return (
@@ -25,14 +25,14 @@ const Product = ({ item, handleClick }) => {
             </Link>
             <div className="product-slide-basket">
                <img src={basket} alt="basket" className="product-slide-icon" />
-               <div onClick={() => handleClick(id)} className="product-slide-add">Добавить в корзину</div>
+               <div className="product-slide-add">Добавить в корзину</div>
             </div>
          </div>
          <div className="product-slide-bottom">
             <h3 className="product-product-name">{name}</h3>
             <div className="product-product-prices">
                <span className="product-product-price product-product-new-price">
-                  {price}
+                  {price} T
                </span>
                <span className="product-product-price product-product-old-price">
                   {/* {oldPrice} */}

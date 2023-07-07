@@ -14,9 +14,9 @@ const Slider = ({ item }) => {
           </div>
           <div className="slider__btns">
             <Button classNames={`slider__btn`} background={`transparent`}>
-              Shop Now
+              Купить
             </Button>
-            <Button classNames={`slider__btn`}>Add To Cart</Button>
+            <Button classNames={`slider__btn`}>Добавить</Button>
           </div>
         </div>
         <div className="slider__content--right">

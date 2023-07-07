@@ -17,10 +17,10 @@ const Details = ({id}) => {
                <img src={process.env.REACT_APP_API_URL + device.img} alt=""></img>
             </div>
             <div className="details__info">
-               <h3 className="details__name">Sony</h3>
+               <h3 className="details__name">{device.name}</h3>
                <div className="details__product-prices">
                   <span className="details__product-price details__product-price--new">
-                     120
+                     {device.price}
                   </span>
                </div>
                <div className="details__product-stars">

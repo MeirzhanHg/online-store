@@ -17,10 +17,11 @@ import Button from "components/ui/button/Button";
 import Timer from "components/ui/timer/Timer";
 import { Context } from "index";
 import { fetchDevices } from "http/deviceApi";
+import { observer } from "mobx-react-lite"
 
 SwiperCore.use([Navigation]);
 
-const Sale = () => {
+const Sale = observer(() => {
    const { device } = useContext(Context);
    const [data, setData] = useState(device.devices);
 
@@ -45,17 +46,17 @@ const Sale = () => {
       );
    };
 
-   const onBasket = (id) => {
-      console.log(id);
+   // const onBasket = (id) => {
+   //    console.log(id);
 
-      let item = JSON.parse(JSON.stringify(device.devices));
+   //    let item = JSON.parse(JSON.stringify(device.devices));
 
-      let basketElem = item.filter((d) => d.id == id);
+   //    let basketElem = item.filter((d) => d.id == id);
 
-      device.setBasket(basketElem);
+   //    device.setBasket(basketElem);
 
-      console.log(JSON.parse(JSON.stringify(device.baskets)));
-   };
+   //    console.log(JSON.parse(JSON.stringify(device.baskets)));
+   // };
 
    return (
       <div className="sale">
@@ -97,10 +98,10 @@ const Sale = () => {
                   <SwiperSlide
                      key={item.id}
                      className={`saleSlide ${
-                        item.id === activeSlideIndex ? "active" : ""
+                        item.id === activeSlideIndex ? "active" : null
                      }`}
                   >
-                     <Product item={item} handleClick={onBasket} />
+                     <Product item={item} />
                   </SwiperSlide>
                ))}
             </Swiper>
@@ -124,6 +125,6 @@ const Sale = () => {
          </div>
       </div>
    );
-};
+});
 
 export default Sale;

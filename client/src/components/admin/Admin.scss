@@ -1,4 +1,6 @@
 .admin {
+   padding: 50px 0;
+
    input {
       width: 250px;
       height: 50px;
@@ -8,10 +10,32 @@
       outline: none;
       background: #F5F5F5;
    }
+
+   &__wrapper {
+      cursor: pointer;
+      display: flex;
+   }
+
+   &__content {
+      display: flex;
+   }
+
+   &__create {
+      margin-right: 170px;  
+   }
+
+   &__icon {
+      font-size: 30px;
+      margin-right: 10px;
+      color: #db4444;
+   }
+
    &__btn {
       font-size: 20px;
+      margin-top: 15px;
       margin-bottom: 50px;
    }
+
    &__label {
       margin-bottom: 10px;
    }
@@ -25,8 +49,47 @@
       flex-direction: column;
       margin-bottom: 40px;
    }
+
    .brand {
       display: flex;
       flex-direction: column;
    }
+
+   .device {
+      >form {
+
+         display: flex;
+         flex-direction: column;
+
+         >select {
+
+         }
+         >input {
+            margin-bottom: 30px;
+         }
+      }
+      &__title {
+         margin-bottom: 25px;
+      }
+   }
+}
+
+
+.card_item {
+
+   &__select {
+      cursor: pointer;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+
+      font-size: 15px;
+      width: 100%;
+      padding: 14px 15px;
+      color: rgba(66, 67, 72, 0.8);
+   }
+
+   &__color {
+      margin-bottom: 25px;
+   }
+
 }

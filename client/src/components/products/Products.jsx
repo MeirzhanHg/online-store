@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react"
 import { fetchDevices } from "http/deviceApi"
 import { Context } from "index"
+import { observer } from "mobx-react-lite"
 
-const Products = () => {
+const Products = observer(() => {
   const { device } = useContext(Context);
 
   useEffect(() => {
@@ -33,6 +34,6 @@ const Products = () => {
       </Button>
     </section>
   );
-};
+});
 
 export default Products;

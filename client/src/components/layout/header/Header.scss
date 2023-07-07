@@ -17,7 +17,6 @@
    }
 
    &_content {
-
       min-height: 70px;
       align-items: center;
       display: flex;
@@ -56,6 +55,7 @@
    }
 
    &_basket {
+      margin-right: 10px;
       position: relative;
       z-index: 3;
    }

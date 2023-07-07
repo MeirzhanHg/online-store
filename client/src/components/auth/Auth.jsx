@@ -12,7 +12,7 @@ import { useContext, useState } from "react"
 
 import "./Auth.scss";
 
-const Auth = observer(({ title, isNameRequired, text, link, question }) => {
+const Auth = observer(({ title, text, link, question }) => {
    const { user } = useContext(Context);
    const location = useLocation();
    const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Auth = observer(({ title, isNameRequired, text, link, question }) => {
             data = await login(formData.email, formData.password);
             console.log(data);
          } else {
-            data = await registration(formData.name, formData.email, formData.password);
+            data = await registration(formData.email, formData.password);
             console.log(data);
          }
          user.setUser(user);
@@ -61,22 +61,6 @@ const Auth = observer(({ title, isNameRequired, text, link, question }) => {
                   <form className="form" onSubmit={handleSubmit(onSubmit)}>
                      <h4 className="auth_title">{title}</h4>
                      <h3 className="auth_details">Введите свои данные ниже</h3>
-
-                     {!isNameRequired && (
-                        <div className="input">
-                           <input
-                              type="text"
-                              placeholder="Name"
-                              name="name"
-                              {...register("name", {
-                                 required: "Имя (обязательно)",
-                              })}
-                           />
-                           {errors.name && (
-                              <div className="error">{errors.name.message}</div>
-                           )}
-                        </div>
-                     )}
 
                      <div className="input">
                         <input

@@ -70,9 +70,18 @@
 
 @media (max-width: 700px) {
    .allproducts {
+      &-wrapper {
+         display: block;
+      }
+      &-navbar {
+         display: none;
+      }
       &-column {
          flex: 0 1 50%;
       }
+   }
+   .brand {
+      display: none;
    }
 }
 
